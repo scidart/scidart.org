@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="scidart_io library API docs, for the Dart programming language.">
+  <title>scidart_io library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart_io</a></li>
+    <li class="self-crumb">scidart_io library</li>
+  </ol>
+  <div class="self-name">scidart_io</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart_io</a></li>
+      <li class="self-crumb">scidart_io library</li>
+    </ol>
+    
+    <h5><span class="package-name">scidart_io</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="scidart_io/scidart_io-library.html">scidart_io</a></li>
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-library">scidart_io</span> library </h1></div>
+
+    
+
+
+
+
+    <section class="summary offset-anchor" id="functions">
+      <h2>Functions</h2>
+
+      <dl class="callables">
+        <dt id="readCSV" class="callable">
+          <span class="name"><a href="scidart_io/readCSV.html">readCSV</a></span><span class="signature">(<wbr><span class="parameter" id="readCSV-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="readCSV-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="readCSV-param-delimiter"><span class="type-annotation">String</span> <span class="parameter-name">delimiter</span>: <span class="default-value">";"</span>, </span> <span class="parameter" id="readCSV-param-skipHeader"><span class="type-annotation">int</span> <span class="parameter-name">skipHeader</span>: <span class="default-value">0</span>, </span> <span class="parameter" id="readCSV-param-skipFooter"><span class="type-annotation">int</span> <span class="parameter-name">skipFooter</span>: <span class="default-value">0</span>, </span> <span class="parameter" id="readCSV-param-convertToArray2d"><span class="type-annotation">bool</span> <span class="parameter-name">convertToArray2d</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="readCSV-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span></span> })
+            <span class="returntype parameter">&#8594; Future</span>
+          </span>
+                  </dt>
+        <dd>
+          Read a CSV file and return a List where each element is a row of the file
+ <code>fileName</code> : file name
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>delimiter</code> : optional, string used to separate values, by default is ";"
+ <code>skipHeader</code> : optional, the number of lines to skip at the beginning of the file, default is 0
+ <code>skipFooter</code> : optional, the number of lines to skip at the end of the file, default is 0
+ <code>convertToArray2d</code> : optional, try convert the dynamic list to a Array2d list,
+ if don't have success, throw a exception, default is false.
+ The conditions to a success conversion is: all the information read in the csv file has to be
+ parseble to a number. If you have header or footer, use skipHeader or skipFooter parameters
+ to ignore this info from conversion.
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ Return a List<list> container the CSV data with all the numbers parsed.
+ References</list> <a href="scidart_io/readCSV.html">[...]</a>
+                  
+</dd>
+        <dt id="readLinesTxt" class="callable">
+          <span class="name"><a href="scidart_io/readLinesTxt.html">readLinesTxt</a></span><span class="signature">(<wbr><span class="parameter" id="readLinesTxt-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="readLinesTxt-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="readLinesTxt-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span></span> })
+            <span class="returntype parameter">&#8594; Future<span class="signature">&lt;<wbr><span class="type-parameter">List</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+          Read a TXT file and return a List where each element is line of the file
+ <code>fileName</code> : file name or path of the file
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ Examples <a href="scidart_io/readLinesTxt.html">[...]</a>
+                  
+</dd>
+        <dt id="readTxt" class="callable">
+          <span class="name"><a href="scidart_io/readTxt.html">readTxt</a></span><span class="signature">(<wbr><span class="parameter" id="readTxt-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="readTxt-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="readTxt-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span></span> })
+            <span class="returntype parameter">&#8594; Future<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+          Read a TXT file and return a String with file content
+ <code>fileName</code> : file name or path of the file
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ Examples <a href="scidart_io/readTxt.html">[...]</a>
+                  
+</dd>
+        <dt id="writeLinesCSV" class="callable">
+          <span class="name"><a href="scidart_io/writeLinesCSV.html">writeLinesCSV</a></span><span class="signature">(<wbr><span class="parameter" id="writeLinesCSV-param-data"><span class="type-annotation">Array2d</span> <span class="parameter-name">data</span>, </span> <span class="parameter" id="writeLinesCSV-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="writeLinesCSV-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="writeLinesCSV-param-delimiter"><span class="type-annotation">String</span> <span class="parameter-name">delimiter</span>: <span class="default-value">";"</span>, </span> <span class="parameter" id="writeLinesCSV-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span>, </span> <span class="parameter" id="writeLinesCSV-param-mode"><span class="type-annotation">FileMode</span> <span class="parameter-name">mode</span>: <span class="default-value">FileMode.write</span></span> })
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Write a list of line in a TXT file
+ <code>data</code> : a list where each line is a string that will be written in the file
+ <code>fileName</code> : file name or path of the file
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>delimiter</code> : optional, string used to separate values, by default is ";"
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ <code>mode</code> : optional, the mode how the program will write the file: <a href="scidart_io/writeLinesCSV.html">[...]</a>
+                  
+</dd>
+        <dt id="writeLinesTxt" class="callable">
+          <span class="name"><a href="scidart_io/writeLinesTxt.html">writeLinesTxt</a></span><span class="signature">(<wbr><span class="parameter" id="writeLinesTxt-param-lines"><span class="type-annotation">List<span class="signature">&lt;<wbr><span class="type-parameter">String</span>&gt;</span></span> <span class="parameter-name">lines</span>, </span> <span class="parameter" id="writeLinesTxt-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="writeLinesTxt-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="writeLinesTxt-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span>, </span> <span class="parameter" id="writeLinesTxt-param-mode"><span class="type-annotation">FileMode</span> <span class="parameter-name">mode</span>: <span class="default-value">FileMode.write</span></span> })
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Write a list of line in a TXT file
+ <code>lines</code> : a list where each line is a string that will be written in the file
+ <code>fileName</code> : file name or path of the file
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ <code>mode</code> : optional, the mode how the program will write the file: <a href="scidart_io/writeLinesTxt.html">[...]</a>
+                  
+</dd>
+        <dt id="writeTxt" class="callable">
+          <span class="name"><a href="scidart_io/writeTxt.html">writeTxt</a></span><span class="signature">(<wbr><span class="parameter" id="writeTxt-param-text"><span class="type-annotation">String</span> <span class="parameter-name">text</span>, </span> <span class="parameter" id="writeTxt-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="writeTxt-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="writeTxt-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span>, </span> <span class="parameter" id="writeTxt-param-mode"><span class="type-annotation">FileMode</span> <span class="parameter-name">mode</span>: <span class="default-value">FileMode.write</span></span> })
+            <span class="returntype parameter">&#8594; void</span>
+          </span>
+                  </dt>
+        <dd>
+          Write a string in a TXT file
+ <code>text</code> : the string that will be written in the file
+ <code>fileName</code> : file name or path of the file
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ <code>mode</code> : optional, the mode how the program will write the file: <a href="scidart_io/writeTxt.html">[...]</a>
+                  
+</dd>
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+    <h5>scidart_io library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart_io/scidart_io-library.html#functions">Functions</a></li>
+      <li><a href="scidart_io/readCSV.html">readCSV</a></li>
+      <li><a href="scidart_io/readLinesTxt.html">readLinesTxt</a></li>
+      <li><a href="scidart_io/readTxt.html">readTxt</a></li>
+      <li><a href="scidart_io/writeLinesCSV.html">writeLinesCSV</a></li>
+      <li><a href="scidart_io/writeLinesTxt.html">writeLinesTxt</a></li>
+      <li><a href="scidart_io/writeTxt.html">writeTxt</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/sidebar-offcanvas-right-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart_io 0.0.1-dev.3
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

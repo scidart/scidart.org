@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the kaiser function from the scidart library, for the Dart programming language.">
+  <title>kaiser function - scidart library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart</a></li>
+    <li><a href="scidart/scidart-library.html">scidart</a></li>
+    <li class="self-crumb">kaiser function</li>
+  </ol>
+  <div class="self-name">kaiser</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart</a></li>
+      <li><a href="scidart/scidart-library.html">scidart</a></li>
+      <li class="self-crumb">kaiser function</li>
+    </ol>
+    
+    <h5>scidart library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart/scidart-library.html#functions">Functions</a></li>
+      <li><a href="scidart/arrayBesselI0.html">arrayBesselI0</a></li>
+      <li><a href="scidart/besselI0.html">besselI0</a></li>
+      <li><a href="scidart/blackman.html">blackman</a></li>
+      <li><a href="scidart/blackmanharris.html">blackmanharris</a></li>
+      <li><a href="scidart/convolution.html">convolution</a></li>
+      <li><a href="scidart/convolutionCircularComplex.html">convolutionCircularComplex</a></li>
+      <li><a href="scidart/convolutionComplex.html">convolutionComplex</a></li>
+      <li><a href="scidart/dbfft.html">dbfft</a></li>
+      <li><a href="scidart/fft.html">fft</a></li>
+      <li><a href="scidart/fftFreq.html">fftFreq</a></li>
+      <li><a href="scidart/findPeaks.html">findPeaks</a></li>
+      <li><a href="scidart/firwin.html">firwin</a></li>
+      <li><a href="scidart/flattop.html">flattop</a></li>
+      <li><a href="scidart/generalCosine.html">generalCosine</a></li>
+      <li><a href="scidart/generalHamming.html">generalHamming</a></li>
+      <li><a href="scidart/getWindow.html">getWindow</a></li>
+      <li><a href="scidart/hamming.html">hamming</a></li>
+      <li><a href="scidart/hann.html">hann</a></li>
+      <li><a href="scidart/ifft.html">ifft</a></li>
+      <li><a href="scidart/kaiser.html">kaiser</a></li>
+      <li><a href="scidart/kaiserAtten.html">kaiserAtten</a></li>
+      <li><a href="scidart/kaiserBeta.html">kaiserBeta</a></li>
+      <li><a href="scidart/lfilter.html">lfilter</a></li>
+      <li><a href="scidart/nuttall.html">nuttall</a></li>
+      <li><a href="scidart/rfft.html">rfft</a></li>
+      <li><a href="scidart/rifft.html">rifft</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">kaiser</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="numdart/Array-class.html">Array</a></span>
+                <span class="name ">kaiser</span>
+(<wbr><span class="parameter" id="kaiser-param-M"><span class="type-annotation">int</span> <span class="parameter-name">M</span>, </span> <span class="parameter" id="kaiser-param-beta"><span class="type-annotation">double</span> <span class="parameter-name">beta</span>, {</span> <span class="parameter" id="kaiser-param-sym"><span class="type-annotation">bool</span> <span class="parameter-name">sym</span>: <span class="default-value">true</span></span> })
+    </section>
+    <section class="desc markdown">
+      <h2 id="return-a-kaiser-window-the-kaiser-window-is-a-taper-formed-by-using-a-bessel-function-parameters">Return a Kaiser window.
+ The Kaiser window is a taper formed by using a Bessel function.
+ Parameters</h2>
+<h2 id="m--int-number-of-points-in-the-output-window-if-zero-or-less-an-empty-array-is-returned-beta--float-shape-parameter-determines-trade-off-between-main-lobe-width-and-side-lobe-level-as-beta-gets-large-the-window-narrows-sym--bool-optional-when-true-default-generates-a-symmetric-window-for-use-in-filter-design-when-false-generates-a-periodic-window-for-use-in-spectral-analysis-returns"> <code>M</code> : int
+ Number of points in the output window. If zero or less, an empty
+ array is returned.
+ <code>beta</code> : float
+ Shape parameter, determines trade-off between main-lobe width and
+ side lobe level. As beta gets large, the window narrows.
+ <code>sym</code> : bool, optional
+ When True (default), generates a symmetric window, for use in filter
+ design.
+ When False, generates a periodic window, for use in spectral analysis.
+ Returns</h2>
+<h2 id="w--array-the-window-with-the-maximum-value-normalized-to-1-though-the-value-1-does-not-appear-if-m-is-even-and-sym-is-true-references"> w : Array
+ The window, with the maximum value normalized to 1 (though the value 1
+ does not appear if <code>M</code> is even and <code>sym</code> is True).
+ References</h2>
+<h2 id="-1-doc-scipysignalwindowskaiser-httpsdocsscipyorgdocscipy-100referencegeneratedscipysignalkaiserhtml-retrieved-2019-07-15--2-scipysignalwindowskaiser-httpsgithubcomscipyscipyblobv100scipysignalwindowspyl1041-l1156-retrieved-2019-07-15--3-kaiser-window-httpsenwikipediaorgwikikaiser_window-retrieved-2019-07-15-examples"> .. <code>1</code> "doc scipy.signal.windows.kaiser". <a href="https://docs.scipy.org/doc/scipy-1.0.0/reference/generated/scipy.signal.kaiser.html">https://docs.scipy.org/doc/scipy-1.0.0/reference/generated/scipy.signal.kaiser.html</a>. Retrieved 2019-07-15.
+ .. <code>2</code> "scipy.signal.windows.kaiser". <a href="https://github.com/scipy/scipy/blob/v1.0.0/scipy/signal/windows.py#L1041-L1156">https://github.com/scipy/scipy/blob/v1.0.0/scipy/signal/windows.py#L1041-L1156</a>. Retrieved 2019-07-15.
+ .. <code>3</code> "Kaiser window". <a href="https://en.wikipedia.org/wiki/Kaiser_window">https://en.wikipedia.org/wiki/Kaiser_window</a>. Retrieved 2019-07-15.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>kaiser(51, 14);
+ Array(<code>0.0, 0.000030289318777624507, 0.00004239621466381779, 0.000051380818964122076, 0.00005869490140397769, 0.00006490568309490965, 0.00007030616828562361, 0.00007507143433951038, 0.00007931605488406376, 0.00008311983051443031, 0.00008654091079321288, 0.00008962313100358323, 0.0000924004076541195, 0.00009489951744979998, 0.0000971419314382709, 0.00009914506860507969, 0.00010092317755426455, 0.00010248797129609238, 0.00010384909295185544, 0.00010501446237187035, 0.00010599053665954447, 0.00010678250685060226, 0.00010739444599705794, 0.00010782941920703497, 0.00010808956293663774, 0.00010817613849151608, 0.00010808956293663774, 0.00010782941920703497, 0.00010739444599705794, 0.00010678250685060226, 0.00010599053665954447, 0.00010501446237187035, 0.00010384909295185544, 0.00010248797129609238, 0.00010092317755426455, 0.00009914506860507969, 0.0000971419314382709, 0.00009489951744979998, 0.0000924004076541195, 0.00008962313100358323, 0.00008654091079321288, 0.00008311983051443031, 0.00007931605488406376, 0.00007507143433951038, 0.00007030616828562361, 0.00006490568309490965, 0.00005869490140397769, 0.000051380818964122076, 0.00004239621466381779, 0.000030289318777624507, 0.0</code>)</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Array kaiser(int M, double beta, {bool sym = true}) {
+  if (M &lt; 1) {
+    return Array([]);
+  }
+  if (M == 1) {
+    return ones(1);
+  }
+  var odd = M % 2;
+  if (!sym &amp;&amp; odd != 0) {
+    M = M + 1;
+  }
+  var n = arange(start: 0, stop: M);
+  var alpha = (M - 1) &#47; 2.0;
+
+  var one = ones(M);
+
+&#47;&#47;  w = (special.i0(beta * np.sqrt(1 - ((n - alpha) &#47; alpha) ** 2.0)) &#47; special.i0(beta))
+
+
+  var den = arraySqrt(one -
+      arrayPow(arrayDivisionToScalar(arraySubToScalar(n, alpha), alpha), 2.0));
+  den = arrayMultiplyToScalar(den, beta);
+
+  var w = arrayDivisionToScalar(arrayBesselI0(den), besselI0(beta));
+
+  if (!sym &amp;&amp; odd != 0) {
+    w = arrayTruncateLast(w);
+  }
+
+  return w;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart 0.0.1-dev.5
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

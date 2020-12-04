@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the lfilter function from the scidart library, for the Dart programming language.">
+  <title>lfilter function - scidart library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart</a></li>
+    <li><a href="scidart/scidart-library.html">scidart</a></li>
+    <li class="self-crumb">lfilter function</li>
+  </ol>
+  <div class="self-name">lfilter</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart</a></li>
+      <li><a href="scidart/scidart-library.html">scidart</a></li>
+      <li class="self-crumb">lfilter function</li>
+    </ol>
+    
+    <h5>scidart library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart/scidart-library.html#functions">Functions</a></li>
+      <li><a href="scidart/arrayBesselI0.html">arrayBesselI0</a></li>
+      <li><a href="scidart/besselI0.html">besselI0</a></li>
+      <li><a href="scidart/blackman.html">blackman</a></li>
+      <li><a href="scidart/blackmanharris.html">blackmanharris</a></li>
+      <li><a href="scidart/convolution.html">convolution</a></li>
+      <li><a href="scidart/convolutionCircularComplex.html">convolutionCircularComplex</a></li>
+      <li><a href="scidart/convolutionComplex.html">convolutionComplex</a></li>
+      <li><a href="scidart/dbfft.html">dbfft</a></li>
+      <li><a href="scidart/fft.html">fft</a></li>
+      <li><a href="scidart/fftFreq.html">fftFreq</a></li>
+      <li><a href="scidart/findPeaks.html">findPeaks</a></li>
+      <li><a href="scidart/firwin.html">firwin</a></li>
+      <li><a href="scidart/flattop.html">flattop</a></li>
+      <li><a href="scidart/generalCosine.html">generalCosine</a></li>
+      <li><a href="scidart/generalHamming.html">generalHamming</a></li>
+      <li><a href="scidart/getWindow.html">getWindow</a></li>
+      <li><a href="scidart/hamming.html">hamming</a></li>
+      <li><a href="scidart/hann.html">hann</a></li>
+      <li><a href="scidart/ifft.html">ifft</a></li>
+      <li><a href="scidart/kaiser.html">kaiser</a></li>
+      <li><a href="scidart/kaiserAtten.html">kaiserAtten</a></li>
+      <li><a href="scidart/kaiserBeta.html">kaiserBeta</a></li>
+      <li><a href="scidart/lfilter.html">lfilter</a></li>
+      <li><a href="scidart/nuttall.html">nuttall</a></li>
+      <li><a href="scidart/rfft.html">rfft</a></li>
+      <li><a href="scidart/rifft.html">rifft</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">lfilter</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="numdart/Array-class.html">Array</a></span>
+                <span class="name ">lfilter</span>
+(<wbr><span class="parameter" id="lfilter-param-b"><span class="type-annotation"><a href="numdart/Array-class.html">Array</a></span> <span class="parameter-name">b</span>, </span> <span class="parameter" id="lfilter-param-a"><span class="type-annotation"><a href="numdart/Array-class.html">Array</a></span> <span class="parameter-name">a</span>, </span> <span class="parameter" id="lfilter-param-x"><span class="type-annotation"><a href="numdart/Array-class.html">Array</a></span> <span class="parameter-name">x</span></span>)
+    </section>
+    <section class="desc markdown">
+      <h2 id="filter-data-along-one-dimension-with-an-iir-or-fir-filter-the-filter-is-a-direct-form-ii-transposed-implementation-of-the-standard-difference-equation-parameters">Filter data along one-dimension with an IIR or FIR filter.
+ The filter is a direct form II transposed implementation of the standard difference equation.
+ Parameters</h2>
+<h2 id="b--array-the-numerator-coefficient-vector-sequence-a--array-the-denominator-coefficient-vector-sequence-x--array-an-input-array-returns"> <code>b</code> : Array
+ The numerator coefficient vector sequence.
+ <code>a</code> : Array
+ The denominator coefficient vector sequence.
+ <code>x</code> : Array
+ An input array.
+ Returns</h2>
+<p> y : Array
+     Filtered x Array.</p>
+<h2 id="references"> References</h2>
+<h2 id="-1-apply-a-digital-filter-direct-form-ii-transposed-httpsrosettacodeorgwikiapply_a_digital_filter_direct_form_ii_transposedjava-retrieved-2019-08-06--2-doc-scipysignallfilter-httpsdocsscipyorgdocscipyreferencegeneratedscipysignallfilterhtml-retrieved-2019-08-06--3-source-code-scipysignallfilter-httpsgithubcomscipyscipyblobv130scipysignalsignaltoolspyl1213-l1399-retrieved-2019-08-06--4-digital-filter-httpsenwikipediaorgwikidigital_filter-retrieved-2019-08-06--5-digital_biquad_filter-direct_form_2-httpsenwikipediaorgwikidigital_biquad_filterdirect_form_2-retrieved-2019-08-06--6-scipy-signaltools-lfilter-function-implementation-sigtools-httpsstackoverflowcomquestions41698892scipy-signaltools-lfilter-function-implementation-sigtools-retrieved-2019-08-06-examples"> .. <code>1</code> "Apply a digital filter (direct form II transposed)". <a href="https://rosettacode.org/wiki/Apply_a_digital_filter_(direct_form_II_transposed)#Java">https://rosettacode.org/wiki/Apply_a_digital_filter_(direct_form_II_transposed)#Java</a>. Retrieved 2019-08-06.
+ .. <code>2</code> "doc scipy.signal.lfilter". <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lfilter.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.lfilter.html</a>. Retrieved 2019-08-06.
+ .. <code>3</code> "source code scipy.signal.lfilter". <a href="https://github.com/scipy/scipy/blob/v1.3.0/scipy/signal/signaltools.py#L1213-L1399">https://github.com/scipy/scipy/blob/v1.3.0/scipy/signal/signaltools.py#L1213-L1399</a>. Retrieved 2019-08-06.
+ .. <code>4</code> "digital filter". <a href="https://en.wikipedia.org/wiki/Digital_filter">https://en.wikipedia.org/wiki/Digital_filter</a>. Retrieved 2019-08-06.
+ .. <code>5</code> "Digital_biquad_filter Direct_form_2". <a href="https://en.wikipedia.org/wiki/Digital_biquad_filter#Direct_form_2">https://en.wikipedia.org/wiki/Digital_biquad_filter#Direct_form_2</a>. Retrieved 2019-08-06.
+ .. <code>6</code> "scipy signaltools lfilter function implementation sigtools". <a href="https://stackoverflow.com/questions/41698892/scipy-signaltools-lfilter-function-implementation-sigtools">https://stackoverflow.com/questions/41698892/scipy-signaltools-lfilter-function-implementation-sigtools</a>. Retrieved 2019-08-06.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>var N = 50.0;
+var fs = 128;
+var n = linspace(0, N, num: (N<em>fs).toInt(), endpoint: false);
+var f1 = 1; // 1Hz
+var sg1 = arraySin(arrayMultiplyToScalar(n, 2</em>pi<em>f1));
+var f2 = 10; // 10Hz
+var sg2 = arraySin(arrayMultiplyToScalar(n, 2</em>pi*f2));
+var sg = sg1 + sg2;
+var nyq = 0.5 * fs; // design filter
+var fc = 1;
+var normal_fc = fc / nyq;
+var numtaps = 30;
+var b = firwin(numtaps, Array([normal_fc]));
+var sgFiltered = lfilter(b, Array(<code>1.0</code>), sg); // filter the signal</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Array lfilter(Array b, Array a, Array x) {
+  Array result = Array.fixed(x.length);
+  for (int i = 0; i &lt; x.length; ++i) {
+    double tmp = 0.0;
+    for (int j = 0; j &lt; b.length; ++j) {
+      if (i - j &lt; 0) continue;
+      tmp += b[j] * x[i - j];
+    }
+    for (int j = 1; j &lt; a.length; ++j) {
+      if (i - j &lt; 0) continue;
+      tmp -= a[j] * result[i - j];
+    }
+    tmp &#47;= a[0];
+    result[i] = tmp;
+  }
+  return result;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart 0.0.1-dev.5
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

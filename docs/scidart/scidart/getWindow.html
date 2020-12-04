@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the getWindow function from the scidart library, for the Dart programming language.">
+  <title>getWindow function - scidart library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart</a></li>
+    <li><a href="scidart/scidart-library.html">scidart</a></li>
+    <li class="self-crumb">getWindow function</li>
+  </ol>
+  <div class="self-name">getWindow</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart</a></li>
+      <li><a href="scidart/scidart-library.html">scidart</a></li>
+      <li class="self-crumb">getWindow function</li>
+    </ol>
+    
+    <h5>scidart library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart/scidart-library.html#functions">Functions</a></li>
+      <li><a href="scidart/arrayBesselI0.html">arrayBesselI0</a></li>
+      <li><a href="scidart/besselI0.html">besselI0</a></li>
+      <li><a href="scidart/blackman.html">blackman</a></li>
+      <li><a href="scidart/blackmanharris.html">blackmanharris</a></li>
+      <li><a href="scidart/convolution.html">convolution</a></li>
+      <li><a href="scidart/convolutionCircularComplex.html">convolutionCircularComplex</a></li>
+      <li><a href="scidart/convolutionComplex.html">convolutionComplex</a></li>
+      <li><a href="scidart/dbfft.html">dbfft</a></li>
+      <li><a href="scidart/fft.html">fft</a></li>
+      <li><a href="scidart/fftFreq.html">fftFreq</a></li>
+      <li><a href="scidart/findPeaks.html">findPeaks</a></li>
+      <li><a href="scidart/firwin.html">firwin</a></li>
+      <li><a href="scidart/flattop.html">flattop</a></li>
+      <li><a href="scidart/generalCosine.html">generalCosine</a></li>
+      <li><a href="scidart/generalHamming.html">generalHamming</a></li>
+      <li><a href="scidart/getWindow.html">getWindow</a></li>
+      <li><a href="scidart/hamming.html">hamming</a></li>
+      <li><a href="scidart/hann.html">hann</a></li>
+      <li><a href="scidart/ifft.html">ifft</a></li>
+      <li><a href="scidart/kaiser.html">kaiser</a></li>
+      <li><a href="scidart/kaiserAtten.html">kaiserAtten</a></li>
+      <li><a href="scidart/kaiserBeta.html">kaiserBeta</a></li>
+      <li><a href="scidart/lfilter.html">lfilter</a></li>
+      <li><a href="scidart/nuttall.html">nuttall</a></li>
+      <li><a href="scidart/rfft.html">rfft</a></li>
+      <li><a href="scidart/rifft.html">rifft</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">getWindow</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="numdart/Array-class.html">Array</a></span>
+                <span class="name ">getWindow</span>
+(<wbr><span class="parameter" id="getWindow-param-window"><span class="type-annotation">dynamic</span> <span class="parameter-name">window</span>, </span> <span class="parameter" id="getWindow-param-Nx"><span class="type-annotation">int</span> <span class="parameter-name">Nx</span>, {</span> <span class="parameter" id="getWindow-param-fftbins"><span class="type-annotation">bool</span> <span class="parameter-name">fftbins</span>: <span class="default-value">true</span></span> })
+    </section>
+    <section class="desc markdown">
+      <h2 id="return-a-window-parameters">Return a window.
+ Parameters</h2>
+<p> <code>window</code> : String, double, or List
+     The type of window to create. See below for more details.
+ <code>Nx</code> : int
+     The number of samples in the window.
+ <code>fftbins</code> : bool, optional
+     If True, create a "periodic" window ready to use with ifftshift
+     and be multiplied by the result of an fft (SEE ALSO fftfreq).</p>
+<h2 id="returns"> Returns</h2>
+<p> get_window : Array
+     Returns a window of length <code>Nx</code> and type <code>window</code></p>
+<h2 id="notes"> Notes</h2>
+<p> Window types:
+     blackman, hamming, hann, flattop,
+     blackmanharris, nuttall,
+     kaiser (needs beta)</p>
+<h2 id="if-the-window-requires-no-parameters-then-window-can-be-a-string-if-the-window-requires-parameters-then-window-must-be-a-tuple-with-the-first-argument-the-string-name-of-the-window-and-the-next-arguments-the-needed-parameters-if-window-is-a-floating-point-number-it-is-interpreted-as-the-beta-parameter-of-the-kaiser-window-each-of-the-window-types-listed-above-is-also-the-name-of-a-function-that-can-be-called-directly-to-create-a-window-of-that-type-references"> If the window requires no parameters, then <code>window</code> can be a string.
+ If the window requires parameters, then <code>window</code> must be a tuple
+ with the first argument the string name of the window, and the next
+ arguments the needed parameters.
+ If <code>window</code> is a floating point number, it is interpreted as the beta
+ parameter of the kaiser window.
+ Each of the window types listed above is also the name of
+ a function that can be called directly to create a window of
+ that type.
+ References</h2>
+<h2 id="-1-doc-scipysignalget_window-httpsdocsscipyorgdocscipy-0140referencegeneratedscipysignalget_windowhtml-retrieved-2019-07-15--2-source-code-scipysignalget_window-httpsgithubcomscipyscipyblobv0140scipysignalwindowspyl1380-retrieved-2019-07-15-examples"> .. <code>1</code> "doc scipy.signal.get_window". <a href="https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.get_window.html">https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.signal.get_window.html</a>. Retrieved 2019-07-15.
+ .. <code>2</code> "source code scipy.signal.get_window". <a href="https://github.com/scipy/scipy/blob/v0.14.0/scipy/signal/windows.py#L1380">https://github.com/scipy/scipy/blob/v0.14.0/scipy/signal/windows.py#L1380</a>. Retrieved 2019-07-15.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>getWindow(<code>'kaiser', 4.0</code>, 9);
+ Array(<code> 0.08848053,  0.32578323,  0.63343178,  0.89640418,  1.0, 0.89640418,  0.63343178,  0.32578323,  0.08848053</code>);
+getWindow('black', 10);
+ Array(<code>-1.38777878e-17, 5.08696327e-02, 2.58000502e-01, 6.30000000e-01, 9.51129866e-01, 9.51129866e-01, 6.30000000e-01, 2.58000502e-01, 5.08696327e-02, -1.38777878e-17</code>);</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Array getWindow(dynamic window, int Nx, {bool fftbins = true}) {
+  var sym = !fftbins;
+  if (window is List &amp;&amp; window[0] is String &amp;&amp; window[1] is double) {
+    &#47;&#47; beta dependent windows
+    var win = window[0] as String;
+    var arg = window[1];
+
+    if (win == &#39;kaiser&#39; || win == &#39;ksr&#39;) {
+      return kaiser(Nx, arg, sym: sym);
+    } else {
+      throw FormatException(&quot;Window type not found&quot;);
+    }
+
+  } else if (window is String) {
+    &#47;&#47; without beta windows
+    if (window == &#39;blackman&#39; || window == &#39;black&#39; || window == &#39;blk&#39;) {
+      return blackman(Nx, sym: sym);
+    } else if (window == &#39;blackmanharris&#39; || window == &#39;blackharr&#39; ||
+        window == &#39;bkh&#39;) {
+      return blackmanharris(Nx, sym: sym);
+    } else if (window == &#39;flattop&#39; || window == &#39;flat&#39; || window == &#39;flt&#39;) {
+      return flattop(Nx, sym: sym);
+    } else if (window == &#39;hamming&#39; || window == &#39;hamm&#39; || window == &#39;ham&#39;) {
+      return hamming(Nx, sym: sym);
+    } else if (window == &#39;hanning&#39; || window == &#39;hann&#39; || window == &#39;han&#39;) {
+      return hann(Nx, sym: sym);
+    } else if (window == &#39;nuttall&#39; || window == &#39;nutl&#39; || window == &#39;nut&#39;) {
+      return nuttall(Nx, sym: sym);
+    } else {
+      throw FormatException(&quot;Window type not found&quot;);
+    }
+  } else if (window is double) {
+    &#47;&#47; kaiser, if dont specified
+    return kaiser(Nx, window, sym: sym);
+  } else {
+    throw FormatException(
+        &quot;window need be a String with the name of windows or array where first element is a String with window name and secound is a double with beta&quot;);
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart 0.0.1-dev.5
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

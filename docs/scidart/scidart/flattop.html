@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the flattop function from the scidart library, for the Dart programming language.">
+  <title>flattop function - scidart library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart</a></li>
+    <li><a href="scidart/scidart-library.html">scidart</a></li>
+    <li class="self-crumb">flattop function</li>
+  </ol>
+  <div class="self-name">flattop</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart</a></li>
+      <li><a href="scidart/scidart-library.html">scidart</a></li>
+      <li class="self-crumb">flattop function</li>
+    </ol>
+    
+    <h5>scidart library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart/scidart-library.html#functions">Functions</a></li>
+      <li><a href="scidart/arrayBesselI0.html">arrayBesselI0</a></li>
+      <li><a href="scidart/besselI0.html">besselI0</a></li>
+      <li><a href="scidart/blackman.html">blackman</a></li>
+      <li><a href="scidart/blackmanharris.html">blackmanharris</a></li>
+      <li><a href="scidart/convolution.html">convolution</a></li>
+      <li><a href="scidart/convolutionCircularComplex.html">convolutionCircularComplex</a></li>
+      <li><a href="scidart/convolutionComplex.html">convolutionComplex</a></li>
+      <li><a href="scidart/dbfft.html">dbfft</a></li>
+      <li><a href="scidart/fft.html">fft</a></li>
+      <li><a href="scidart/fftFreq.html">fftFreq</a></li>
+      <li><a href="scidart/findPeaks.html">findPeaks</a></li>
+      <li><a href="scidart/firwin.html">firwin</a></li>
+      <li><a href="scidart/flattop.html">flattop</a></li>
+      <li><a href="scidart/generalCosine.html">generalCosine</a></li>
+      <li><a href="scidart/generalHamming.html">generalHamming</a></li>
+      <li><a href="scidart/getWindow.html">getWindow</a></li>
+      <li><a href="scidart/hamming.html">hamming</a></li>
+      <li><a href="scidart/hann.html">hann</a></li>
+      <li><a href="scidart/ifft.html">ifft</a></li>
+      <li><a href="scidart/kaiser.html">kaiser</a></li>
+      <li><a href="scidart/kaiserAtten.html">kaiserAtten</a></li>
+      <li><a href="scidart/kaiserBeta.html">kaiserBeta</a></li>
+      <li><a href="scidart/lfilter.html">lfilter</a></li>
+      <li><a href="scidart/nuttall.html">nuttall</a></li>
+      <li><a href="scidart/rfft.html">rfft</a></li>
+      <li><a href="scidart/rifft.html">rifft</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">flattop</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="numdart/Array-class.html">Array</a></span>
+                <span class="name ">flattop</span>
+(<wbr><span class="parameter" id="flattop-param-M"><span class="type-annotation">int</span> <span class="parameter-name">M</span>, {</span> <span class="parameter" id="flattop-param-sym"><span class="type-annotation">bool</span> <span class="parameter-name">sym</span>: <span class="default-value">true</span></span> })
+    </section>
+    <section class="desc markdown">
+      <h2 id="return-a-flat-top-window-parameters">Return a flat top window.
+ Parameters</h2>
+<h2 id="m--int-number-of-points-in-the-output-window-if-zero-or-less-an-empty-array-is-returned-sym--bool-optional-when-true-default-generates-a-symmetric-window-for-use-in-filter-design-when-false-generates-a-periodic-window-for-use-in-spectral-analysis-returns"> <code>M</code> : int
+ Number of points in the output window. If zero or less, an empty
+ array is returned.
+ <code>sym</code> : bool, optional
+ When true (default), generates a symmetric window, for use in filter
+ design.
+ When false, generates a periodic window, for use in spectral analysis.
+ Returns</h2>
+<h2 id="w--array-the-window-with-the-maximum-value-normalized-to-1-though-the-value-1-does-not-appear-if-m-is-even-and-sym-is-true-notes"> w : Array
+ The window, with the maximum value normalized to 1 (though the value 1
+ does not appear if <code>M</code> is even and <code>sym</code> is True).
+ Notes</h2>
+<h2 id="flat-top-windows-are-used-for-taking-accurate-measurements-of-signal-amplitude-in-the-frequency-domain-with-minimal-scalloping-error-from-the-center-of-a-frequency-bin-to-its-edges-compared-to-others--this-is-a-5th-order-cosine-window-with-the-5-terms-optimized-to-make-the-main-lobe-maximally-flat-1_-references"> Flat top windows are used for taking accurate measurements of signal
+ amplitude in the frequency domain, with minimal scalloping error from the
+ center of a frequency bin to its edges, compared to others.  This is a
+ 5th-order cosine window, with the 5 terms optimized to make the main lobe
+ maximally flat. <code>1</code>_
+ References</h2>
+<h2 id="-1-scipysignalwindowsflattop-httpsdocsscipyorgdocscipyreferencegeneratedscipysignalwindowsflattophtmlscipysignalwindowsflattop-retrieved-2019-07-15-examples"> .. <code>1</code> "scipy.signal.windows.flattop". <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.flattop.html#scipy.signal.windows.flattop">https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.flattop.html#scipy.signal.windows.flattop</a>. Retrieved 2019-07-15.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import 'package:scidart/src/numdart/numdart.dart';
+import 'package:scidart/scidart/signal/signal.dart';
+var M = 10;
+var w = flattop(M);</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Array flattop(int M, {bool sym = true}) {
+  var a = Array([0.21557895, 0.41663158, 0.277263158, 0.083578947, 0.006947368]);
+  return generalCosine(M, a, sym: sym);
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart 0.0.1-dev.5
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

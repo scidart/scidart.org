@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 0.28.2">
+  <meta name="description" content="scidart_io API docs, for the Dart programming language.">
+  <title>scidart_io - Dart API docs</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/scidart/scidart_io">scidart_io package</a></li>
+  </ol>
+  <div class="self-name">scidart_io</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="https://github.com/scidart/scidart_io">scidart_io package</a></li>
+    </ol>
+    
+    <h5 class="hidden-xs"><span class="package-name">scidart_io</span> <span class="package-kind">package</span></h5>
+    <ol>
+          <li class="section-title">Libraries</li>
+          <li><a href="scidart_io/scidart_io-library.html">scidart_io</a></li>
+    </ol>
+  </div>
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <section class="desc markdown">
+        <h1 id="scidart-io">SciDart IO</h1>
+<p><strong>SciDart IO</strong> is file manipulation library compatible with <strong>SciDart</strong>. This library is part of <a href="https://github.com/scidart">SciDart project</a>.</p>
+<h2 id="goals">Goals</h2>
+<p>A data manipulation library compatible with SciDart. The focus platform is PC for while to simplify the development.</p>
+<h2 id="motivation">Motivation</h2>
+<p>Make easy save and retrieve data from SciDart.</p>
+<h2 id="pub-link">PUB link</h2>
+<p>Link to the Pub repository: <a href="https://pub.dev/packages/scidart_io">https://pub.dev/packages/scidart_io</a></p>
+<h2 id="installation">Installation</h2>
+<p>You can follow instruction in the Pub web site: <a href="https://pub.dev/packages/scidart_io#-installing-tab-">https://pub.dev/packages/scidart_io#-installing-tab-</a></p>
+<h2 id="scidart-io-structure">SciDart IO structure</h2><ul><li>IO: File manipulation libraries;<ul><li>csv: <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> file manipulation;</li><li>txt: text file manipulation;</li></ul></li></ul>
+<h2 id="examples">Examples</h2>
+<h3 id="csv">CSV</h3>
+<pre class="language-Dart"><code class="language-Dart">import 'package:scidart/numdart.dart';
+import 'package:scidart_io/scidart_io.dart';
+
+void main() async {
+  // read stock_data.csv file in the same directory of the current
+  // script
+  // the delimiter of this file is ',' but can be any character
+  // the reader skip one line in the header of the file and
+  // one line at the end of the file
+  var data = await readCSV('stock_data.csv', delimiter: ',', skipHeader: 1, skipFooter: 1);
+  
+  print(data); // show the data
+  
+  // generate a 2d array data for test
+  var data2 = Array2d([
+    Array([1, 2, 3, 4, 5]),
+    Array([2, 3, 4, 5, 6]),
+    Array([3, 4, 5, 6, 7]),
+    Array([4, 5, 6, 7, 8]),
+    Array([5, 6, 7, 8, 9]),
+  ]);
+  
+  // define a file name
+  var fileName = 'data_array.csv';
+  
+  // save the data in a CSV file
+  await writeLinesCSV(data2, fileName);
+  
+  // read the same data again and convert to Array2d again
+  var data2Read = await readCSV(fileName, convertToArray2d: true);
+  
+  // show the data
+  print(data2Read);
+}
+</code></pre>
+<h3 id="txt">TXT</h3>
+<pre class="language-Dart"><code class="language-Dart">import 'package:scidart/numdart.dart';
+import 'package:scidart_io/scidart_io.dart';
+
+void main() async {
+  // define a data for tests
+  var data = Array2d([
+    Array([1, 2, 3, 4, 5]),
+    Array([2, 3, 4, 5, 6]),
+    Array([3, 4, 5, 6, 7]),
+    Array([4, 5, 6, 7, 8]),
+    Array([5, 6, 7, 8, 9]),
+  ]);
+  
+  // define a file name
+  var fileName = 'data_array.txt';
+  
+  // write lines in the txt files
+  await writeLinesTxt(data.toString().split('\n'), fileName);
+  
+  // read the line again
+  var dataRead = await readLinesTxt(fileName);
+  
+  // show in the terminal
+  print(dataRead);
+  
+  // to write plain string in a file, just use writeTxt
+  
+  // write string in the txt files
+  await writeTxt(data.toString(), fileName);
+    
+  // read a string again
+  dataRead = await readTxt(fileName);
+  
+  print(dateRead);
+}
+
+</code></pre>
+<h2 id="todo-list">Todo list</h2>
+<h3 id="benchmarks">Benchmarks</h3><ul><li><code> </code> made benchmark on Linux</li><li><code> </code> made benchmark on MacOS</li><li><code> </code> made benchmark on MS Windows</li></ul>
+<h3 id="code-implementations">Code implementations</h3><ul><li><code>x</code> write, read txt (work only in PC)</li><li><code>x</code> write, read csv (work only in PC)</li><li><code> </code> write, read json (work only in PC)</li><li><code> </code> write, read mongo (work only in PC)</li><li><code> </code> write, read sql like databases (work only in PC)</li></ul>
+      </section>
+      
+        <section class="summary">
+            <h2>Libraries</h2>
+          <dl>
+            <dt id="scidart_io">
+              <span class="name"><a href="scidart_io/scidart_io-library.html">scidart_io</a></span>             
+            </dt>
+            <dd>
+              
+            </dd>          </dl>
+        </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart_io 0.0.1-dev.3
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

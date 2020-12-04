@@ -1,0 +1,29 @@
+{
+  "name": "scidart.org",
+  "version": "0.0.1-dev.1",
+  "description": "main SciDart site",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scidart/scidart.org.git"
+  },
+  "author": "Angelo Polotto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scidart/scidart.org/issues"
+  },
+  "homepage": "https://github.com/scidart/scidart.org#readme",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "mustache": "^4.0.1",
+    "showdown": "^1.9.1"
+  },
+  "devDependencies": {}
+}

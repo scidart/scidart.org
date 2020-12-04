@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the readCSV function from the scidart_io library, for the Dart programming language.">
+  <title>readCSV function - scidart_io library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart_io</a></li>
+    <li><a href="scidart_io/scidart_io-library.html">scidart_io</a></li>
+    <li class="self-crumb">readCSV function</li>
+  </ol>
+  <div class="self-name">readCSV</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart_io</a></li>
+      <li><a href="scidart_io/scidart_io-library.html">scidart_io</a></li>
+      <li class="self-crumb">readCSV function</li>
+    </ol>
+    
+    <h5>scidart_io library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart_io/scidart_io-library.html#functions">Functions</a></li>
+      <li><a href="scidart_io/readCSV.html">readCSV</a></li>
+      <li><a href="scidart_io/readLinesTxt.html">readLinesTxt</a></li>
+      <li><a href="scidart_io/readTxt.html">readTxt</a></li>
+      <li><a href="scidart_io/writeLinesCSV.html">writeLinesCSV</a></li>
+      <li><a href="scidart_io/writeLinesTxt.html">writeLinesTxt</a></li>
+      <li><a href="scidart_io/writeTxt.html">writeTxt</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">readCSV</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype">Future</span>
+                <span class="name ">readCSV</span>
+(<wbr><span class="parameter" id="readCSV-param-fileName"><span class="type-annotation">String</span> <span class="parameter-name">fileName</span>, {</span> <span class="parameter" id="readCSV-param-baseDir"><span class="type-annotation">String</span> <span class="parameter-name">baseDir</span>, </span> <span class="parameter" id="readCSV-param-delimiter"><span class="type-annotation">String</span> <span class="parameter-name">delimiter</span>: <span class="default-value">";"</span>, </span> <span class="parameter" id="readCSV-param-skipHeader"><span class="type-annotation">int</span> <span class="parameter-name">skipHeader</span>: <span class="default-value">0</span>, </span> <span class="parameter" id="readCSV-param-skipFooter"><span class="type-annotation">int</span> <span class="parameter-name">skipFooter</span>: <span class="default-value">0</span>, </span> <span class="parameter" id="readCSV-param-convertToArray2d"><span class="type-annotation">bool</span> <span class="parameter-name">convertToArray2d</span>: <span class="default-value">false</span>, </span> <span class="parameter" id="readCSV-param-encoding"><span class="type-annotation">Encoding</span> <span class="parameter-name">encoding</span>: <span class="default-value">utf8</span></span> })
+    </section>
+    <section class="desc markdown">
+      <h2 id="read-a-csv-file-and-return-a-list-where-each-element-is-a-row-of-the-file-filename--file-name-basedir--optional-base-directory-to-the-file-if-not-informed-get-current-script-path-delimiter--optional-string-used-to-separate-values-by-default-is--skipheader--optional-the-number-of-lines-to-skip-at-the-beginning-of-the-file-default-is-0-skipfooter--optional-the-number-of-lines-to-skip-at-the-end-of-the-file-default-is-0-converttoarray2d--optional-try-convert-the-dynamic-list-to-a-array2d-list-if-dont-have-success-throw-a-exception-default-is-false-the-conditions-to-a-success-conversion-is-all-the-information-read-in-the-csv-file-has-to-be-parseble-to-a-number-if-you-have-header-or-footer-use-skipheader-or-skipfooter-parameters-to-ignore-this-info-from-conversion-encoding--optional-the-encoding-of-the-file-default-is-utf8-return-a-listlist-container-the-csv-data-with-all-the-numbers-parsed-references">Read a CSV file and return a List where each element is a row of the file
+ <code>fileName</code> : file name
+ <code>baseDir</code> : optional, base directory to the file, if not informed, get current script path.
+ <code>delimiter</code> : optional, string used to separate values, by default is ";"
+ <code>skipHeader</code> : optional, the number of lines to skip at the beginning of the file, default is 0
+ <code>skipFooter</code> : optional, the number of lines to skip at the end of the file, default is 0
+ <code>convertToArray2d</code> : optional, try convert the dynamic list to a Array2d list,
+ if don't have success, throw a exception, default is false.
+ The conditions to a success conversion is: all the information read in the csv file has to be
+ parseble to a number. If you have header or footer, use skipHeader or skipFooter parameters
+ to ignore this info from conversion.
+ <code>encoding</code> : optional, the encoding of the file, default is utf8
+ Return a List<list> container the CSV data with all the numbers parsed.
+ References</list></h2>
+<h2 id="-1-nupyio-httpsgithubcomnumpynumpyblobv1161numpylibnpyiopyl1536-l2219-retrieved-2019-07-26--2-read-csv-file-by-dart-httpsflutterframeworkcomread-csv-file-by-dart-retrieved-2019-07-26--3-how-to-stream-a-file-line-by-line-in-dart-httpsstackoverflowcomquestions20815913how-to-stream-a-file-line-by-line-in-dart-retrieved-2019-07-26--4-dart-file-class-httpsapidartlangorgstable240dart-iofile-classhtml-retrieved-2019-07-26-examples"> .. <code>1</code> "nupyio". <a href="https://github.com/numpy/numpy/blob/v1.16.1/numpy/lib/npyio.py#L1536-L2219">https://github.com/numpy/numpy/blob/v1.16.1/numpy/lib/npyio.py#L1536-L2219</a>. Retrieved 2019-07-26.
+ .. <code>2</code> "read csv file by dart". <a href="https://flutterframework.com/read-csv-file-by-dart/">https://flutterframework.com/read-csv-file-by-dart/</a>. Retrieved 2019-07-26.
+ .. <code>3</code> "how to stream a file line by line in dart". <a href="https://stackoverflow.com/questions/20815913/how-to-stream-a-file-line-by-line-in-dart">https://stackoverflow.com/questions/20815913/how-to-stream-a-file-line-by-line-in-dart</a>. Retrieved 2019-07-26.
+ .. <code>4</code> "Dart file class". <a href="https://api.dartlang.org/stable/2.4.0/dart-io/File-class.html">https://api.dartlang.org/stable/2.4.0/dart-io/File-class.html</a>. Retrieved 2019-07-26.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>var data = await readCSV('stock_data.csv', delimiter: ',', skipHeader: 1, skipFooter: 1);</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">Future&lt;dynamic&gt; readCSV(String fileName,
+    {String baseDir,
+    String delimiter = &quot;;&quot;,
+    int skipHeader = 0,
+    int skipFooter = 0,
+    bool convertToArray2d = false,
+    Encoding encoding = utf8}) async {
+  final lines =
+      await readLinesTxt(fileName, baseDir: baseDir, encoding: encoding);
+  List&lt;List&gt; data = List();
+
+  for (var l = skipHeader; l &lt; lines.length - skipFooter; l++) {
+    &#47;&#47; Process results.
+    List rows = lines[l].split(delimiter); &#47;&#47; split by delimiter
+    List rows2 = List();
+    for (var row in rows) {
+      var aux = num.tryParse(row);
+      rows2.add(aux != null ? aux : row);
+    }
+    data.add(rows2);
+  }
+
+  if (convertToArray2d) {
+    var dataArray2d = Array2d.empty();
+
+    for (var row in data) {
+      var arrayRow = Array.empty();
+      row.forEach((i) =&gt; arrayRow.add(i));
+      dataArray2d.add(arrayRow);
+    }
+
+    return dataArray2d;
+  } else {
+    return data;
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart_io 0.0.1-dev.3
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the firwin function from the scidart library, for the Dart programming language.">
+  <title>firwin function - scidart library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart</a></li>
+    <li><a href="scidart/scidart-library.html">scidart</a></li>
+    <li class="self-crumb">firwin function</li>
+  </ol>
+  <div class="self-name">firwin</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart</a></li>
+      <li><a href="scidart/scidart-library.html">scidart</a></li>
+      <li class="self-crumb">firwin function</li>
+    </ol>
+    
+    <h5>scidart library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart/scidart-library.html#functions">Functions</a></li>
+      <li><a href="scidart/arrayBesselI0.html">arrayBesselI0</a></li>
+      <li><a href="scidart/besselI0.html">besselI0</a></li>
+      <li><a href="scidart/blackman.html">blackman</a></li>
+      <li><a href="scidart/blackmanharris.html">blackmanharris</a></li>
+      <li><a href="scidart/convolution.html">convolution</a></li>
+      <li><a href="scidart/convolutionCircularComplex.html">convolutionCircularComplex</a></li>
+      <li><a href="scidart/convolutionComplex.html">convolutionComplex</a></li>
+      <li><a href="scidart/dbfft.html">dbfft</a></li>
+      <li><a href="scidart/fft.html">fft</a></li>
+      <li><a href="scidart/fftFreq.html">fftFreq</a></li>
+      <li><a href="scidart/findPeaks.html">findPeaks</a></li>
+      <li><a href="scidart/firwin.html">firwin</a></li>
+      <li><a href="scidart/flattop.html">flattop</a></li>
+      <li><a href="scidart/generalCosine.html">generalCosine</a></li>
+      <li><a href="scidart/generalHamming.html">generalHamming</a></li>
+      <li><a href="scidart/getWindow.html">getWindow</a></li>
+      <li><a href="scidart/hamming.html">hamming</a></li>
+      <li><a href="scidart/hann.html">hann</a></li>
+      <li><a href="scidart/ifft.html">ifft</a></li>
+      <li><a href="scidart/kaiser.html">kaiser</a></li>
+      <li><a href="scidart/kaiserAtten.html">kaiserAtten</a></li>
+      <li><a href="scidart/kaiserBeta.html">kaiserBeta</a></li>
+      <li><a href="scidart/lfilter.html">lfilter</a></li>
+      <li><a href="scidart/nuttall.html">nuttall</a></li>
+      <li><a href="scidart/rfft.html">rfft</a></li>
+      <li><a href="scidart/rifft.html">rifft</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">firwin</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype">dynamic</span>
+                <span class="name ">firwin</span>
+(<wbr><span class="parameter" id="firwin-param-numtaps"><span class="type-annotation">int</span> <span class="parameter-name">numtaps</span>, </span> <span class="parameter" id="firwin-param-cutoff"><span class="type-annotation"><a href="numdart/Array-class.html">Array</a></span> <span class="parameter-name">cutoff</span>, {</span> <span class="parameter" id="firwin-param-width"><span class="type-annotation">double</span> <span class="parameter-name">width</span>, </span> <span class="parameter" id="firwin-param-window"><span class="type-annotation">dynamic</span> <span class="parameter-name">window</span>: <span class="default-value">'hamming'</span>, </span> <span class="parameter" id="firwin-param-pass_zero"><span class="type-annotation">dynamic</span> <span class="parameter-name">pass_zero</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="firwin-param-scale"><span class="type-annotation">bool</span> <span class="parameter-name">scale</span>: <span class="default-value">true</span>, </span> <span class="parameter" id="firwin-param-nyq"><span class="type-annotation">double</span> <span class="parameter-name">nyq</span>, </span> <span class="parameter" id="firwin-param-fs"><span class="type-annotation">double</span> <span class="parameter-name">fs</span></span> })
+    </section>
+    <section class="desc markdown">
+      <h2 id="fir-filter-design-using-the-window-method-this-function-computes-the-coefficients-of-a-finite-impulse-response-filter--the-filter-will-have-linear-phase-it-will-be-type-i-if-numtaps-is-odd-and-type-ii-if-numtaps-is-even-type-ii-filters-always-have-zero-response-at-the-nyquist-frequency-so-a-valueerror-exception-is-raised-if-firwin-is-called-with-numtaps-even-and-having-a-passband-whose-right-end-is-at-the-nyquist-frequency-parameters">FIR filter design using the window method.
+ This function computes the coefficients of a finite impulse response
+ filter.  The filter will have linear phase; it will be Type I if
+ <code>numtaps</code> is odd and Type II if <code>numtaps</code> is even.
+ Type II filters always have zero response at the Nyquist frequency, so a
+ ValueError exception is raised if firwin is called with <code>numtaps</code> even and
+ having a passband whose right end is at the Nyquist frequency.
+ Parameters</h2>
+<p> <code>numtaps</code> : int
+     Length of the filter (number of coefficients, i.e. the filter
+     order + 1).  <code>numtaps</code> must be odd if a passband includes the
+     Nyquist frequency.
+ <code>cutoff</code> : Array
+     Cutoff frequency of filter (expressed in the same units as <code>fs</code>)
+     OR an array of cutoff frequencies (that is, band edges). In the
+     latter case, the frequencies in <code>cutoff</code> should be positive and
+     monotonically increasing between 0 and <code>fs/2</code>.  The values 0 and
+     <code>fs/2</code> must not be included in <code>cutoff</code>.
+ <code>width</code> : double or None, optional
+     If <code>width</code> is not None, then assume it is the approximate width
+     of the transition region (expressed in the same units as <code>fs</code>)
+     for use in Kaiser FIR filter design.  In this case, the <code>window</code>
+     argument is ignored.
+ <code>window</code> : string or tuple of string and parameter values, optional
+     Desired window to use. See <code>scipy.signal.get_window</code> for a list
+     of windows and required parameters.
+ <code>pass_zero</code> : {true, false, 'bandpass', 'lowpass', 'highpass', 'bandstop'}, optional
+     If True, the gain at the frequency 0 (i.e. the "DC gain") is 1.
+     If False, the DC gain is 0. Can also be a string argument for the
+     desired filter type (equivalent to <code>btype</code> in IIR design functions).
+     .. versionadded:: 1.3.0
+        Support for string arguments.
+ <code>scale</code> : bool, optional
+     Set to True to scale the coefficients so that the frequency
+     response is exactly unity at a certain frequency.
+     That frequency is either:
+     - 0 (DC) if the first passband starts at 0 (i.e. pass_zero
+       is True)
+     - <code>fs/2</code> (the Nyquist frequency) if the first passband ends at
+       <code>fs/2</code> (i.e the filter is a single band highpass filter);
+       center of first passband otherwise
+ <code>nyq</code> : double, optional
+     <em>Deprecated.  Use <code>fs</code> instead.</em>  This is the Nyquist frequency.
+     Each frequency in <code>cutoff</code> must be between 0 and <code>nyq</code>. Default
+     is 1.
+ <code>fs</code> : float, optional
+     The sampling frequency of the signal.  Each frequency in <code>cutoff</code>
+     must be between 0 and <code>fs/2</code>.  Default is 2.</p>
+<h2 id="returns"> Returns</h2>
+<p> h : Array
+     Coefficients of length <code>numtaps</code> FIR filter.</p>
+<h2 id="raises"> Raises</h2>
+<p> ValueError
+     If any value in <code>cutoff</code> is less than or equal to 0 or greater
+     than or equal to <code>fs/2</code>, if the values in <code>cutoff</code> are not strictly
+     monotonically increasing, or if <code>numtaps</code> is even but a passband
+     includes the Nyquist frequency.</p>
+<h2 id="references"> References</h2>
+<h2 id="-1-doc-scipysignalfirwin-httpsdocsscipyorgdocscipyreferencegeneratedscipysignalfirwinhtmlscipysignalfirwin-retrieved-2019-08-06--2-source-code-scipysignalfirwin-httpsgithubcomscipyscipyblobv130scipysignalfir_filter_designpyl264-l482-retrieved-2019-08-06--3-fir-filter-design-httpsscipy-cookbookreadthedocsioitemsfirfilterhtml-retrieved-2019-08-06-examples"> .. <code>1</code> "doc scipy.signal.firwin". <a href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.firwin.html#scipy.signal.firwin">https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.firwin.html#scipy.signal.firwin</a>. Retrieved 2019-08-06.
+ .. <code>2</code> "source code scipy.signal.firwin". <a href="https://github.com/scipy/scipy/blob/v1.3.0/scipy/signal/fir_filter_design.py#L264-L482">https://github.com/scipy/scipy/blob/v1.3.0/scipy/signal/fir_filter_design.py#L264-L482</a>. Retrieved 2019-08-06.
+ .. <code>3</code> "fir filter design". <a href="https://scipy-cookbook.readthedocs.io/items/FIRFilter.html">https://scipy-cookbook.readthedocs.io/items/FIRFilter.html</a>. Retrieved 2019-08-06.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>var numtaps = 3;
+var f = 0.1;
+firwin(numtaps, Array([f]));
+ Array(<code>0.06799017,  0.86401967,  0.06799017</code>);</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">dynamic firwin(int numtaps, Array cutoff,
+    {double width,
+      dynamic window = &#39;hamming&#39;,
+      dynamic pass_zero = true,
+    bool scale = true,
+    double nyq,
+    double fs}) {
+  nyq = 0.5 * _getFs(fs, nyq);
+  cutoff = arrayDivisionToScalar(cutoff, nyq);
+
+  &#47;&#47; Check for invalid input.
+  if (cutoff.isEmpty) {
+    throw FormatException(&quot;At least one cutoff frequency must be given.&quot;);
+  }
+  if (arrayMin(cutoff) &lt;= 0 || arrayMax(cutoff) &gt;= 1) {
+    throw FormatException(
+        &quot;Invalid cutoff frequency: frequencies must be greater than 0 and less than fs&#47;2.&quot;);
+  }
+  if (arrayDiff(cutoff).any((i) =&gt; i &lt;= 0)) {
+    throw FormatException(
+        &quot;Invalid cutoff frequencies: the frequencies must be strictly increasing.&quot;);
+  }
+
+  if (width != null) {
+    &#47;&#47; A width was given. Find the beta parameter of the Kaiser window
+    &#47;&#47; and set `window`. This overrides the value of `window` passed in.
+    var atten = kaiserAtten(numtaps, width &#47; nyq);
+    var beta = kaiserBeta(atten);
+    window = [&#39;kaiser&#39;, beta];
+  }
+
+  if (pass_zero is String) {
+    if (pass_zero == &#39;bandstop&#39; || pass_zero == &#39;lowpass&#39;) {
+      if (pass_zero == &#39;lowpass&#39;) {
+        if (cutoff.length != 1) {
+          throw FormatException(
+              &#39;cutoff must have one element if pass_zero==&quot;lowpass&quot;, got ${cutoff}&#39;);
+        }
+        else if (cutoff.length &lt;= 1) {
+          throw FormatException(
+              &#39;cutoff must have at least two elements if pass_zero==&quot;bandstop&quot;, got ${cutoff}&#39;);
+        }
+        pass_zero = true;
+      }
+      else if (pass_zero == &#39;bandpass&#39; || pass_zero == &#39;highpass&#39;) {
+        if (pass_zero == &#39;highpass&#39;) {
+          if (cutoff.length != 1) {
+            throw FormatException(
+                &#39;cutoff must have one element if pass_zero==&quot;highpass&quot;, got ${cutoff
+                    .length}&#39;);
+          }
+        }
+        else if (cutoff.length &lt;= 1) {
+          throw FormatException(
+              &#39;cutoff must have at least two elements if pass_zero==&quot;bandpass&quot;, got ${cutoff}&#39;);
+        }
+        pass_zero = false;
+      }
+      else {
+        throw FormatException(
+            &#39;pass_zero must be True, False, &quot;bandpass&quot;, &quot;lowpass&quot;, &quot;highpass&quot;, or &quot;bandstop&quot;, got ${pass_zero}&#39;);
+      }
+    }
+  }
+
+  &#47;&#47; ensure bool-like
+  if (!(pass_zero is bool)) {
+    throw FormatException(
+        &quot;pass_zero is not a bool, please, insert: true, false, &#39;bandpass&#39;, &#39;lowpass&#39;, &#39;highpass&#39;, &#39;bandstop&#39;&quot;);
+  }
+
+  bool pass_nyquist = intToBool(cutoff.length &amp; 1 ^ boolToInt(pass_zero));
+
+  if (pass_nyquist &amp;&amp; numtaps % 2 == 0) {
+    throw FormatException(
+        &quot;A filter with an even number of coefficients must have zero response at the Nyquist frequency.&quot;);
+  }
+
+  &#47;&#47; Insert 0 and&#47;or 1 at the ends of cutoff so that the length of cutoff
+  &#47;&#47; is even, and each pair in cutoff corresponds to passband.
+  if (pass_zero) {
+    cutoff = arrayConcat(Array([0.0]), cutoff);
+  }
+  if (pass_nyquist) {
+    cutoff = arrayConcat(cutoff, Array([1.0]));
+  }
+
+  &#47;&#47; `bands` is a 2D array; each row gives the left and right edges of
+  &#47;&#47; a passband.
+  var bands = arrayReshapeToMatrix(cutoff, 2);
+
+  &#47;&#47; Build up the coefficients.
+  var alpha = 0.5 * (numtaps - 1);
+  var m = arraySubToScalar(arange(start: 0, stop: numtaps), alpha);
+  var h = Array.fixed(m.length, initialValue: 0);
+  for (var j = 0; j &lt; bands.row; j++) { &#47;&#47; lr[0] - left; lr[1] - right
+    var left = bands[j][0];
+    var right = bands[j][1];
+    h += arrayMultiplyToScalar(
+        arraySinc(arrayMultiplyToScalar(m, right)), right);
+    h -= arrayMultiplyToScalar(arraySinc(arrayMultiplyToScalar(m, left)), left);
+  }
+
+  &#47;&#47; Get and apply the window function.
+  var win = getWindow(window, numtaps, fftbins: false);
+  h *= win;
+
+  &#47;&#47; Now handle scaling if desired.
+  if (scale) {
+    &#47;&#47; Get the first passband.
+    var left = bands[0][0];
+    var right = bands[0][1];
+    var scale_frequency;
+    if (left == 0) {
+      scale_frequency = 0.0;
+    }
+    else if (right == 1) {
+      scale_frequency = 1.0;
+    }
+    else {
+      scale_frequency = 0.5 * (left + right);
+    }
+    var c = arrayCos(arrayMultiplyToScalar(m, pi * scale_frequency));
+    var s = arraySum(h * c);
+    h = arrayDivisionToScalar(h, s);
+  }
+
+  return h;
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart 0.0.1-dev.5
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

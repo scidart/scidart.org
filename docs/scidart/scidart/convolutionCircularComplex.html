@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the convolutionCircularComplex function from the scidart library, for the Dart programming language.">
+  <title>convolutionCircularComplex function - scidart library - Dart API</title>
+  <!-- required because all the links are pseudo-absolute -->
+  <base href="..">
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,400i,400,300|Source+Sans+Pro:400,300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="static-assets/github.css">
+  <link rel="stylesheet" href="static-assets/styles.css">
+  <link rel="icon" href="static-assets/favicon.png">
+  
+</head>
+
+<body>
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="index.html">scidart</a></li>
+    <li><a href="scidart/scidart-library.html">scidart</a></li>
+    <li class="self-crumb">convolutionCircularComplex function</li>
+  </ol>
+  <div class="self-name">convolutionCircularComplex</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="col-xs-6 col-sm-3 col-md-2 sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="index.html">scidart</a></li>
+      <li><a href="scidart/scidart-library.html">scidart</a></li>
+      <li class="self-crumb">convolutionCircularComplex function</li>
+    </ol>
+    
+    <h5>scidart library</h5>
+    <ol>
+    
+    
+    
+    
+      <li class="section-title"><a href="scidart/scidart-library.html#functions">Functions</a></li>
+      <li><a href="scidart/arrayBesselI0.html">arrayBesselI0</a></li>
+      <li><a href="scidart/besselI0.html">besselI0</a></li>
+      <li><a href="scidart/blackman.html">blackman</a></li>
+      <li><a href="scidart/blackmanharris.html">blackmanharris</a></li>
+      <li><a href="scidart/convolution.html">convolution</a></li>
+      <li><a href="scidart/convolutionCircularComplex.html">convolutionCircularComplex</a></li>
+      <li><a href="scidart/convolutionComplex.html">convolutionComplex</a></li>
+      <li><a href="scidart/dbfft.html">dbfft</a></li>
+      <li><a href="scidart/fft.html">fft</a></li>
+      <li><a href="scidart/fftFreq.html">fftFreq</a></li>
+      <li><a href="scidart/findPeaks.html">findPeaks</a></li>
+      <li><a href="scidart/firwin.html">firwin</a></li>
+      <li><a href="scidart/flattop.html">flattop</a></li>
+      <li><a href="scidart/generalCosine.html">generalCosine</a></li>
+      <li><a href="scidart/generalHamming.html">generalHamming</a></li>
+      <li><a href="scidart/getWindow.html">getWindow</a></li>
+      <li><a href="scidart/hamming.html">hamming</a></li>
+      <li><a href="scidart/hann.html">hann</a></li>
+      <li><a href="scidart/ifft.html">ifft</a></li>
+      <li><a href="scidart/kaiser.html">kaiser</a></li>
+      <li><a href="scidart/kaiserAtten.html">kaiserAtten</a></li>
+      <li><a href="scidart/kaiserBeta.html">kaiserBeta</a></li>
+      <li><a href="scidart/lfilter.html">lfilter</a></li>
+      <li><a href="scidart/nuttall.html">nuttall</a></li>
+      <li><a href="scidart/rfft.html">rfft</a></li>
+      <li><a href="scidart/rifft.html">rifft</a></li>
+    
+    
+    
+    </ol>
+  </div><!--/.sidebar-offcanvas-left-->
+
+  <div id="dartdoc-main-content" class="col-xs-12 col-sm-9 col-md-8 main-content">
+      <div><h1><span class="kind-function">convolutionCircularComplex</span> function </h1></div>
+
+    <section class="multi-line-signature">
+        <span class="returntype"><a href="numdart/ArrayComplex-class.html">ArrayComplex</a></span>
+                <span class="name ">convolutionCircularComplex</span>
+(<wbr><span class="parameter" id="convolutionCircularComplex-param-input"><span class="type-annotation"><a href="numdart/ArrayComplex-class.html">ArrayComplex</a></span> <span class="parameter-name">input</span>, </span> <span class="parameter" id="convolutionCircularComplex-param-kernel"><span class="type-annotation"><a href="numdart/ArrayComplex-class.html">ArrayComplex</a></span> <span class="parameter-name">kernel</span>, {</span> <span class="parameter" id="convolutionCircularComplex-param-keepLength"><span class="type-annotation">dynamic</span> <span class="parameter-name">keepLength</span>: <span class="default-value">false</span></span> })
+    </section>
+    <section class="desc markdown">
+      <h2 id="computes-the-circular-convolution-of-the-given-complex-vectors-each-vectors-length-must-be-the-same-input--input-signal-kernel--kernel-periodic-signal-keeplength--the-output-length-is-the-same-of-the-input-default-is-false-references">Computes the circular convolution of the given complex vectors.
+ Each vector's length must be the same.
+ <code>input</code> : input signal
+ <code>kernel</code> : kernel periodic signal
+ <code>keepLength</code> : the output length is the same of the input, default is false
+ References</h2>
+<h2 id="-1-1d-fast-convolution-httpsstackoverflowcomquestions35474078python-1d-array-circular-convolution-retrieved-2019-07-25-examples"> .. <code>1</code> "1d fast convolution". <a href="https://stackoverflow.com/questions/35474078/python-1d-array-circular-convolution">https://stackoverflow.com/questions/35474078/python-1d-array-circular-convolution</a>. Retrieved 2019-07-25.
+ Examples</h2>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>var xi = Array(<code>1, 1, 1, 1, 1, 1, 1, 1, 1, 1</code>).toComplexArray();
+var yi = Array(<code>1, 1, 1, 1, 1, 1, 1, 1, 1, 1</code>).toComplexArray();
+convolutionCircularComplex(xi, yi);
+ ArrayComplex(<code>
+ Complex(real: 1.0000000000000004, imaginary: -3.138230416273776e-14),
+ Complex(real: 1.9999999999999878, imaginary: -3.126388037344441e-14),
+ Complex(real: 2.999999999999988, imaginary: -2.0605739337042905e-14),
+ Complex(real: 3.999999999999982, imaginary: -2.5342690908776908e-14),
+ Complex(real: 4.999999999999975, imaginary: -1.4684549872375405e-14),
+ Complex(real: 5.999999999999973, imaginary: -9.947598300641402e-15),
+ Complex(real: 6.999999999999975, imaginary: -1.7053025658242404e-14),
+ Complex(real: 7.999999999999974, imaginary: -3.315866100213801e-15),
+ Complex(real: 8.999999999999964, imaginary: 5.684341886080802e-15),
+ Complex(real: 9.999999999999973, imaginary: 1.3737159558028604e-14),
+ Complex(real: 9.999999999999961, imaginary: 2.1789977229976407e-14),
+ Complex(real: 9.999999999999979, imaginary: 1.4210854715202005e-15),
+ Complex(real: 9.99999999999998, imaginary: 2.3803181647963357e-14),
+ Complex(real: 9.999999999999998, imaginary: 1.2730557349035129e-14),
+ Complex(real: 10.000000000000004, imaginary: 2.7889727564437797e-14),
+ Complex(real: 10.000000000000007, imaginary: 2.5224267119483555e-14),
+ Complex(real: 10.00000000000001, imaginary: 3.0908609005564356e-14),
+ Complex(real: 10.00000000000001, imaginary: 2.2026824808563106e-14),
+ Complex(real: 10.000000000000023, imaginary: 3.173757553061781e-14),
+ Complex(real: 10.000000000000037, imaginary: 3.0553337637684307e-14),
+ Complex(real: 9.000000000000057, imaginary: 2.4632148173016807e-14),
+ Complex(real: 8.000000000000021, imaginary: 9.000207986294602e-15),
+ Complex(real: 6.999999999999992, imaginary: -1.8000415972589204e-14),
+ Complex(real: 6.000000000000062, imaginary: -3.0790185216271006e-14),
+ Complex(real: 5.0000000000000036, imaginary: -2.1789977229976407e-14),
+ Complex(real: 3.9999999999999973, imaginary: -1.9421501444109406e-14),
+ Complex(real: 2.9999999999999933, imaginary: 3.884300288821881e-14),
+ Complex(real: 2.000000000000009, imaginary: 3.789561257387201e-15),
+ Complex(real: 1.0000000000000058, imaginary: -5.329070518200751e-16)</code>)</p></blockquote></blockquote></blockquote>
+    </section>
+    
+    <section class="summary source-code" id="source">
+      <h2><span>Implementation</span></h2>
+      <pre class="language-dart"><code class="language-dart">ArrayComplex convolutionCircularComplex(ArrayComplex input, ArrayComplex kernel,
+    {keepLength = false}) {
+  if (keepLength) {
+    int n = input.length;
+    if (n != input.length || n != kernel.length) {
+      throw FormatException(&quot;Mismatched lengths&quot;);
+    }
+
+    var x = fft(input);
+    var y = fft(kernel);
+
+    var c = x * y; &#47;&#47; arrayComplex multiplication
+
+    return ifft(c);
+  } else {
+    var ii = input.copy();
+    var kk = kernel.copy();
+    kk = arrayComplexConcat(kk, kk);
+    return convolutionComplex(ii, kk);
+  }
+}</code></pre>
+    </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="col-xs-6 col-sm-6 col-md-2 sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    scidart 0.0.1-dev.5
+  </span>
+
+  
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="static-assets/typeahead.bundle.min.js"></script>
+<script src="static-assets/highlight.pack.js"></script>
+<script src="static-assets/URI.js"></script>
+<script src="static-assets/script.js"></script>
+
+
+</body>
+
+</html>

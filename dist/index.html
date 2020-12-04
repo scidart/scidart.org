@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="SciDart is a experimental cross-platform scientific platform for Dart.">
+    <meta name="keywords" content="Dart, Flutter, SciDart">
+    <meta name="author" content="Angelo Polotto">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SciDart</title>
+
+    <link rel="icon" type="image/png" href="./favicon.ico"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg">
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="btn" href="https://scidart.org/docs/scidart">🧪 SciDart docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn" href="https://scidart.org/docs/scidart_io">📡 SciDart IO docs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn" href="https://github.com/scidart/scidart_examples">⚒ Examples</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn" href="https://github.com/scidart">📖 Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn" href="https://www.buymeacoffee.com/polotto">☕ Buy a coffee</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div style="text-align:center">
+    <img src="https://github.com/scidart/scidart.org/blob/master/img/logo_small.png?raw=true"  alt="SciDart logo"/>
+</div>
+<p><strong>SciDart</strong> is an experimental cross-platform scientific platform for Dart.</p>
+<h2 id="goals">🏹 Goals</h2>
+<p>The main goal of <strong>SciDart</strong> is run the main module where Dart can run, in other words, run on Flutter, Dart CLI, Dart web, etc. Beside, offer tools to help the data analysis.</p>
+<h2 id="motivation">🏃 Motivation</h2>
+<p>Some time ago I tried make a guitar tuner (frequency estimator) with Flutter and, I faced with the problem: Dart didn't have a unified scientific library. So, I tried implement something to help me and the community with this problem.</p>
+<h2 id="scidartmodules">📦 SciDart modules</h2>
+<p>The <strong>SciDart</strong> are the combination of the following modules:</p>
+<ul>
+<li><strong>SciDart</strong>: main library with all the numerical processing routines. It can run everywhere (<a href="https://github.com/scidart/scidart">Github</a> / <a href="https://pub.dev/packages/scidart">PUB</a>);</li>
+<li><strong>SciDart IO</strong>: library to handle data files, for now, was made to run only in Desktop (<a href="https://github.com/scidart/scidart_io">Github</a> / <a href="https://pub.dev/packages/scidart_io">PUB</a>);</li>
+<li><strong>SciDart Plot</strong>: library to plot the data (<a href="https://github.com/scidart/scidart_plot">Github</a> / <a href="https://pub.dev/packages/scidart_plot">PUB</a>);</li>
+</ul>
+<h2 id="installation">🔌 Installation</h2>
+<p>Choose your package and following the instructions in the PUB website.</p>
+<h2 id="documentation">📁 Documentation</h2>
+<ul>
+<li><a href="https://scidart.org/docs/scidart">SciDart docs</a>;</li>
+<li><a href="https://scidart.org/docs/scidart_io">SciDart IO docs</a>;</li>
+<li>SciDart Plot TODO;</li>
+</ul>
+<h2 id="scidartmodulesfunctions">🧬 SciDart modules functions</h2>
+<h3 id="scidart">🧪 SciDart</h3>
+<ul>
+<li>NumDart: Numerical computation libraries;</li>
+<li>array_base: array manipulation;</li>
+<li>calculus: calculus base;</li>
+<li>constants: scientific constants;</li>
+<li>fastmath: optimized math operations;</li>
+<li>geometric: geometric related operations;</li>
+<li>interpolation: discrete function interpolation;</li>
+<li>linalg: linear algebra algorithms: matrix, decomposition, etc;</li>
+<li>numbers: numeric functions that are missing in Dart by default: Complex, double truncation, etc;</li>
+<li>polynomial: polynomial estimation, regression, etc;</li>
+<li>random: random data generation;</li>
+<li>spaces: vector linear spaces generators: arrange, ones, linspace, etc;</li>
+<li>statistic: statistic computation;</li>
+<li>time: execution time measurement;</li>
+<li>SciDart: Scientific computation libraries;</li>
+<li>fftpack: fourier transformer tools;<ul>
+<li>dbfft</li>
+<li>fft</li>
+<li>fftfreq</li>
+<li>rfft</li></ul></li>
+<li>signal: signal manipulation tools;<ul>
+<li>convolution</li>
+<li>fir</li>
+<li>lfilter</li>
+<li>peaks</li>
+<li>windows</li></ul></li>
+<li>special: special functions;<ul>
+<li>bessel</li></ul></li>
+</ul>
+<h3 id="scidartio">📡 SciDart IO</h3>
+<ul>
+<li>IO: File manipulation libraries;</li>
+<li>csv: <a href="https://en.wikipedia.org/wiki/Comma-separated_values">CSV</a> file manipulation;</li>
+<li>txt: text file manipulation;</li>
+</ul>
+<h3 id="scidartplot">📈 SciDart Plot</h3>
+<p>TODO.</p>
+<h2 id="dartreplforprototypingquickly">🖥 Dart REPL for prototyping quickly</h2>
+<p>Dart don't have <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> by default, but I found <a href="https://medium.com/dartlang/dart-repl-poc-f327e3769b6f">this amazing post from Andreas Kirsch
+</a> and He implemented an experimental Dart REPL but the <a href="https://github.com/BlackHC/dart_repl/issues/5">current library don't support Dart SDK > 2.0.0</a>.
+So, I decided to leave this work pending for now.</p>
+<h2 id="howtocontribute">🙌 How to contribute</h2>
+<p>I recommend check the <strong>Projects</strong> section and choose a task or choose and solve a problem with <strong>SciDart</strong> and 
+implement the missing parts and read the file CONTRIBUTING.md.</p>
+<p>The reference values for all functions came from with SciPy. The contributions need use SciPy as reference too.</p>
+<p>Every contribution need to have tests, documentation and examples, otherwise, the pull request will be blocked.</p>
+<h2 id="supporters">☕ Supporters</h2>
+<p>SciDart is an open source project that runs on donations to pay the bills e.g. our domain name. If you want to support SciDart, you can ☕ <a href="https://www.buymeacoffee.com/polotto"><strong>buy a coffee here</strong></a>.</p>
+<h2 id="references">📚 References</h2>
+<p>Below, the list of the main references of <strong>SciDart</strong>:</p>
+<ul>
+<li>SciPy: https://www.scipy.org/</li>
+<li>Jupyter: https://jupyter.org/</li>
+<li>JAMA A Java Matrix Package: https://math.nist.gov/javanumerics/jama/</li>
+<li>Commons Math The Apache Commons Mathematics Library: https://commons.apache.org/proper/commons-math/</li>
+<li>Rosetta code: https://rosettacode.org/</li>
+</ul>
+<h2 id="license">⚠ License</h2>
+<p>Copyright (c) 2019-present <a href="https://github.com/polotto">Angelo Polotto</a> and Contributors. Scidart is free and open-source software licensed under the <a href="./LICENSE">Apache-2.0 License</a>. The official logo was created by <a href="https://www.linkedin.com/in/juliano-polotto-550ba379/">Juliano Polotto</a> and distributed under Creative Commons license (CC BY-SA 4.0 International).</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</body>
+</html>
