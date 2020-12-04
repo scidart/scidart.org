@@ -38,6 +38,8 @@ function renderTemplates() {
     fs.writeFileSync('./index.html', indexRendered, 'utf-8');
 }
 
+renderTemplates();
+
 liveServer.start(params);
 
 fs.watch('./templates', (curr, prev) => {
