@@ -1,5 +1,5 @@
 <div style="text-align:center">
-    <img src="https://github.com/scidart/scidart.org/blob/master/img/logo_small.png?raw=true"  alt="SciDart logo"/>
+    <img class="img-fluid" src="https://github.com/scidart/scidart.org/blob/master/img/logo_small.png?raw=true"  alt="SciDart logo"/>
 </div>
 
 **SciDart** is an experimental cross-platform scientific platform for Dart.
@@ -26,8 +26,8 @@ Choose your package and following the instructions in the PUB website.
 
 ## 📁 Documentation
 
-- [SciDart docs](https://scidart.org/docs/scidart);
-- [SciDart IO docs](https://scidart.org/docs/scidart_io);
+- [SciDart docs](https://pub.dev/documentation/scidart/latest/);
+- [SciDart IO docs](https://pub.dev/documentation/scidart_io/latest/);
 - SciDart Plot TODO;
 
 ## 🧬 SciDart modules functions
