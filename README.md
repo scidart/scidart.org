@@ -28,7 +28,7 @@ Choose your package and following the instructions in the PUB website.
 
 - [SciDart docs](https://pub.dev/documentation/scidart/latest/);
 - [SciDart IO docs](https://pub.dev/documentation/scidart_io/latest/);
-- SciDart Plot TODO;
+- [SciDart Plot docs](https://pub.dev/documentation/scidart_plot/latest/);
 
 ## 🧬 SciDart modules functions
 
