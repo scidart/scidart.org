@@ -71,7 +71,29 @@ Choose your package and following the instructions in the PUB website.
 
 ### 📈 SciDart Plot
 
-TODO.
+- Plot types:
+  - Bar plot ([code](https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/bar_test.dart#L10)):
+   
+  ![Bar plot](https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/barSimple.svg)
+  
+  - Dot plot ([code](https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/dot_test.dart#L10)):
+  
+  ![Dot plot](https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/dotSimple.svg)
+
+  - Line plot ([code](https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/line_test.dart#L10)):
+  
+  ![Line plot](https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/plotSimple.svg)
+
+  - Stem plot ([code](https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/stem_test.dart#L10)):
+  
+  ![Stem plot](https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/stemSimple.svg)
+
+  - Pie plot ([code](https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/pie_test/pie_test.dart#L10)):
+  
+  ![Pie plot](https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/pie_test/test_files/plotSimple.svg)
+
+
+- Plot export formats: SVG string that can saved or redered anywhere;
 
 ## 🖥 Dart REPL for prototyping quickly
 

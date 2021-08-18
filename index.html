@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <title>SciDart</title>
+
     <meta name="description" content="SciDart is a experimental cross-platform scientific platform for Dart.">
     <meta name="keywords" content="Dart, Flutter, SciDart">
     <meta name="author" content="Angelo Polotto">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=robots content="index, follow">
+    <link rel=canonical href=https://scidart.org/>
+    <meta name=google-site-verification content="G-3L9RHKP5K3">
+    <meta property="og:title" content="SciDart">
 
-    <title>SciDart</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3L9RHKP5K3"></script>
+    <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-3L9RHKP5K3',{anonymize_ip:!1})}</script>
+
 
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -98,7 +107,20 @@
 <li>txt: text file manipulation;</li>
 </ul>
 <h3 id="scidartplot">📈 SciDart Plot</h3>
-<p>TODO.</p>
+<ul>
+<li><p>Plot types:</p></li>
+<li><p>Bar plot (<a href="https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/bar_test.dart#L10">code</a>):</p>
+<p><img src="https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/barSimple.svg" alt="Bar plot" /></p></li>
+<li><p>Dot plot (<a href="https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/dot_test.dart#L10">code</a>):</p>
+<p><img src="https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/dotSimple.svg" alt="Dot plot" /></p></li>
+<li><p>Line plot (<a href="https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/line_test.dart#L10">code</a>):</p>
+<p><img src="https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/plotSimple.svg" alt="Line plot" /></p></li>
+<li><p>Stem plot (<a href="https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/general_test/stem_test.dart#L10">code</a>):</p>
+<p><img src="https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/general_test/test_files/stemSimple.svg" alt="Stem plot" /></p></li>
+<li><p>Pie plot (<a href="https://github.com/scidart/scidart_plot/blob/55c08e4fbf55c80cd03f516f7c977a7dfe92560f/test/plot/pie_test/pie_test.dart#L10">code</a>):</p>
+<p><img src="https://raw.githubusercontent.com/scidart/scidart_plot/master/test/plot/pie_test/test_files/plotSimple.svg" alt="Pie plot" /></p></li>
+<li><p>Plot export formats: SVG string that can saved or redered anywhere;</p></li>
+</ul>
 <h2 id="dartreplforprototypingquickly">🖥 Dart REPL for prototyping quickly</h2>
 <p>Dart don't have <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> by default, but I found <a href="https://medium.com/dartlang/dart-repl-poc-f327e3769b6f">this amazing post from Andreas Kirsch
 </a> and He implemented an experimental Dart REPL but the <a href="https://github.com/BlackHC/dart_repl/issues/5">current library don't support Dart SDK > 2.0.0</a>.
