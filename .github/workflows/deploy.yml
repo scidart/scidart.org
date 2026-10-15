@@ -1,0 +1,73 @@
+name: Deploy
+
+# Builds the site from the latest scidart release and publishes it on GitHub
+# Pages. Requires Settings > Pages > Source = "GitHub Actions".
+#
+# Runs on:
+# - push to master (site changes);
+# - repository_dispatch "scidart-release", sent by the scidart repo after a
+#   release (client_payload.ref pins the tag, like "v0.1.0");
+# - manual run, optionally with a scidart tag;
+# - pull requests, build only, so a broken example blocks the merge.
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  repository_dispatch:
+    types: [scidart-release]
+  workflow_dispatch:
+    inputs:
+      scidart_ref:
+        description: scidart tag to document (empty = latest vX.Y.Z)
+        required: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-${{ github.event_name == 'pull_request' && github.ref || 'deploy' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: npm ci
+      - name: Bring the library (examples, bridge, API reference, changelog)
+        env:
+          # from inputs/payload through env, never interpolated into the script
+          SCIDART_REF: ${{ github.event.inputs.scidart_ref || github.event.client_payload.ref }}
+        run: npm run sync
+      - run: npm test
+      - run: npm run check
+      - run: npm run build
+      - if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

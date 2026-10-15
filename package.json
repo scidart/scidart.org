@@ -1,29 +1,30 @@
 {
-  "name": "scidart.org",
-  "version": "0.0.1-dev.1",
-  "description": "main SciDart site",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/scidart/scidart.org.git"
-  },
-  "author": "Angelo Polotto",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/scidart/scidart.org/issues"
-  },
-  "homepage": "https://github.com/scidart/scidart.org#readme",
-  "dependencies": {
-    "live-server": "^1.2.1",
-    "mustache": "^4.0.1",
-    "showdown": "^1.9.1"
-  },
-  "devDependencies": {}
+	"name": "scidart.org",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"description": "Official site of the scidart library: guides, runnable examples, interactive demos, release notes and API reference.",
+	"scripts": {
+		"prepare": "svelte-kit sync || true",
+		"sync": "node scripts/sync-scidart.mjs",
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^3.0.6",
+		"@sveltejs/kit": "^2.15.0",
+		"@sveltejs/vite-plugin-svelte": "^7.3.0",
+		"marked": "^18.1.1",
+		"shiki": "^4.5.0",
+		"svelte": "^5.57.0",
+		"svelte-check": "^4.7.6",
+		"tslib": "^2.8.1",
+		"typescript": "~6.0.3",
+		"vite": "^8.3.0",
+		"vitest": "^5.0.4",
+		"yaml": "^2.9.1"
+	}
 }

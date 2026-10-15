@@ -1,0 +1,7 @@
+name: scidart_site_bridge
+description: Exposes scidart to the interactive demos of scidart.org (compiled with dart2js).
+publish_to: none
+environment:
+  sdk: ^3.3.0
+dependencies:
+  scidart: any
