@@ -16,6 +16,9 @@ describe('helpers', () => {
 		expect(apiLink('linspace()')).toBe('/api/numdart/linspace.html');
 		expect(apiLink('notAThing')).toBeUndefined();
 		expect(apiLink('a + b')).toBeUndefined();
+		// names of Object.prototype are not API symbols
+		expect(apiLink('toString')).toBeUndefined();
+		expect(apiLink('constructor')).toBeUndefined();
 	});
 
 	it('slugifies headings', () => {

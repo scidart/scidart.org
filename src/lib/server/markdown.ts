@@ -33,7 +33,8 @@ const escape = (s: string) =>
 /** `linspace`, `linspace()` and `PolyFit` link to their API page when dart doc knows them. */
 export function apiLink(code: string): string | undefined {
 	const name = code.replace(/\(\)$/, '');
-	return /^[A-Za-z_][A-Za-z0-9_]*$/.test(name) ? api[name] : undefined;
+	// own keys only: `toString` must not resolve to Object.prototype.toString
+	return /^[A-Za-z_][A-Za-z0-9_]*$/.test(name) && Object.hasOwn(api, name) ? api[name] : undefined;
 }
 
 export function slugify(text: string): string {

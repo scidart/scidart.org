@@ -7,11 +7,11 @@ const LIBRARY_KIND = 9;
 
 /** @param {{name: string, href: string, enclosedBy?: {kind: number, name: string}}[]} index */
 export function apiIndex(index) {
-	const out = {};
+	const out = Object.create(null);
 	for (const e of index) {
 		if (e.enclosedBy?.kind !== LIBRARY_KIND) continue;
-		if (out[e.name] && e.enclosedBy.name !== 'scidart') continue;
+		if (Object.hasOwn(out, e.name) && e.enclosedBy.name !== 'scidart') continue;
 		out[e.name] = `/api/${e.href}`;
 	}
-	return out;
+	return { ...out };
 }
