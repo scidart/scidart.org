@@ -1,0 +1,7 @@
+name: scidart_site_examples
+description: Examples shown on scidart.org. Each file in bin/ runs during the site build.
+publish_to: none
+environment:
+  sdk: ^3.0.0
+dependencies:
+  scidart: any

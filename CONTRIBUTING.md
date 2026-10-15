@@ -7,14 +7,11 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Pull Request Process
 
-1. Ensure any install or build dependencies are removed before the end of the layer when doing a 
-   build.
-2. Update the README.md with details of changes to the interface, this includes new environment 
-   variables, exposed ports, useful file locations and container parameters.
-3. Increase the version numbers in the pubspec.yaml file to the new version that this
-   Pull Request would represent. The versioning scheme we use is [SemVer](http://semver.org/).
-4. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
-   do not have permission to do that, you may request the second reviewer to merge it for you.
+1. Branch from `master` and open the pull request against `master`.
+2. Run `npm run sync`, `npm test`, `npm run check` and `npm run build`; the CI runs the same steps and blocks the merge if one fails.
+3. New examples go in `examples/bin/` with the `title`, `module` and `description` header. Never paste output by hand: the build runs every example.
+4. Guides live in `content/docs/`. Keep names in backticks so they link to the API reference.
+5. Merging to `master` publishes the site.
 
 ## Code of Conduct
 
