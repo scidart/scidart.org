@@ -28,8 +28,9 @@
 	let error = $state('');
 	const bracketed = $derived(method === 'brentq' || method === 'bisect');
 
-	function pick() {
-		({ a, b, x0 } = presets[f]);
+	// read the new name from the event: the change listener can run before bind:value updates f
+	function pick(name: string) {
+		({ a, b, x0 } = presets[name]);
 	}
 
 	$effect(() => {
@@ -47,7 +48,7 @@
 
 <div class="controls">
 	<label>f(x)
-		<select bind:value={f} onchange={pick}>
+		<select bind:value={f} onchange={(e) => pick(e.currentTarget.value)}>
 			{#each Object.keys(presets) as name (name)}<option>{name}</option>{/each}
 		</select>
 	</label>
